@@ -398,6 +398,7 @@ Import 语句应始终放在文件的顶部。
 fallback 和 receive 函数中不要包含空格：
 
 正确写法::
+
     receive() external payable {
         ...
     }
@@ -1116,7 +1117,7 @@ Add comments above functions or contracts following `doxygen <https://www.doxyge
 of one or multiple lines starting with ``///`` or a
 multiline comment starting with ``/**`` and ending with ``*/``.
 
-For example, the contract from :ref:`a simple smart contract <simple-smart-contract>`_ with the comments
+For example, the contract from :ref:`a simple smart contract <simple-smart-contract>` with the comments
 added looks like the one below::
 
     pragma solidity >=0.4.16 <0.9.0;
@@ -1142,6 +1143,6 @@ added looks like the one below::
     }
 
 
-It is recommended that Solidity contracts are fully annontated using :ref:`NatSpec <natspec>`_ for all public interfaces (everything in the ABI).
+It is recommended that Solidity contracts are fully annontated using :ref:`NatSpec <natspec>` for all public interfaces (everything in the ABI).
 
-Please see the sectian about :ref:`NatSpec <natspec>`_ for a detailed explanation.
+Please see the sectian about :ref:`NatSpec <natspec>` for a detailed explanation.

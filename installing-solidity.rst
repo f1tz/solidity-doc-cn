@@ -399,8 +399,11 @@ Solidity 有 Git 子模块，需确保完全加载它们：
 
 **确保你已安装外部依赖（见上面）**
 
-Solidity 使用 CMake 来配置构建。你也许想要安装 `cache`_ 来加速重复构建，CMake自动进行这个工作。
+Solidity 使用 CMake 来配置构建。你也许想要安装 `ccache`_ 来加速重复构建，CMake自动进行这个工作。
 Linux、macOS 和其他 Unix系统上的构建方式都差不多：
+
+
+.. _ccache: https://ccache.dev/
 
 .. code:: bash
 

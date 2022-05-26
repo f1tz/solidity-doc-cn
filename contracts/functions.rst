@@ -74,9 +74,9 @@
 
 .. note::
 
-   :ref:`外部函数<external-function-calls>` 不可以接受多维数组作为参数
-  如果原文件加入 `pragma abicoder v2;` 可以启用ABI v2版编码功能，这此功能可用。
-  （注：在 0.7.0 之前是使用``pragma experimental ABIEncoderV2;``）
+    :ref:`外部函数<external-function-calls>` 不可以接受多维数组作为参数
+    如果原文件加入 `pragma abicoder v2;` 可以启用ABI v2版编码功能，这此功能可用。
+    （注：在 0.7.0 之前是使用``pragma experimental ABIEncoderV2;``）
 
 
    :ref:`内部函数<external-function-calls>` 则不需要启用ABI v2 就接受多维数组作为参数。
@@ -126,13 +126,13 @@
 
 这个形式等同于赋值给返回参数，然后用 ``return;`` 退出。
 
-如果使用  ``return `` 提前退出有返回值的函数， 必须在用 return 时提供返回值。
+如果使用 ``return`` 提前退出有返回值的函数， 必须在用 return 时提供返回值。
 
 
 .. note::
    非内部函数有些类型没法返回，比如限制的类型有：多维动态数组、结构体等。
 
-   如果添加  ``pragma abicoder v2;`` 启用 ABI V2 编码器，则是可以的返回更多类型，不过 ``mapping``  仍然是受限的。
+   如果添加  ``pragma abicoder v2;`` 启用 ABI V2 编码器，则是可以的返回更多类型，不过 ``mapping`` 仍然是受限的。
 
 .. _multi-return:
 
@@ -226,7 +226,7 @@ Pure 纯函数
 
 纯函数能够使用 ``revert()`` 和 ``require()`` 在 :ref:`发生错误 <assert-and-require>` 时去还原潜在状态更改。
 
-还原状态更改不被视为 "状态修改", 因为它只还原以前在没有``view`` 或 ``pure`` 限制的代码中所做的状态更改, 并且代码可以选择捕获 ``revert`` 并不传递还原。
+还原状态更改不被视为 "状态修改", 因为它只还原以前在没有 ``view`` 或 ``pure`` 限制的代码中所做的状态更改, 并且代码可以选择捕获 ``revert`` 并不传递还原。
 
 这种行为也符合 ``STATICCALL`` 操作码。
 
@@ -264,7 +264,7 @@ receive 接收以太函数
 如果两个函数都没有，这个合约就没法通过常规的转账交易接收以太（会抛出异常）．
 
 
-更糟的是，``receive`` 函数可能只有 2300 gas 可以使用（如，当使用 ``send`` 或 ``transfer`` 时）， 除了基础的日志输出之外，进行其他操作的余地很小。下面的操作消耗会操作 2300  gas :
+更糟的是， ``receive`` 函数可能只有 2300 gas 可以使用（如，当使用 ``send`` 或 ``transfer`` 时）， 除了基础的日志输出之外，进行其他操作的余地很小。下面的操作消耗会操作 2300  gas :
 
 - 写入存储
 - 创建合约
@@ -316,7 +316,7 @@ Fallback 回退函数
 
 fallback　函数始终会接收数据，但为了同时接收以太时，必须标记为　``payable`` 。
 
-如果使用了带参数的版本，``_input`` 将包含发送到合约的完整数据（等于 ``msg.data`` ），并且通过 ``_output`` 返回数据。
+如果使用了带参数的版本， ``_input`` 将包含发送到合约的完整数据（等于 ``msg.data`` ），并且通过 ``_output`` 返回数据。
 返回数据不是 ABI 编码过的数据，相反，它返回不经过修改的数据。
 
 
@@ -326,7 +326,7 @@ fallback　函数始终会接收数据，但为了同时接收以太时，必须
 
 .. warning::
     ``payable`` 的fallback函数也可以在纯以太转账的时候执行， 如果没有　:ref:`receive 以太函数 <receive-ether-function>`
-    推荐总是定义一个receive函数，而不是定义一个``payable`` 的fallback函数，
+    推荐总是定义一个receive函数，而不是定义一个 ``payable`` 的fallback函数，
 
 .. note::
     如果想要解码输入数据，那么前四个字节用作函数选择器，然后用 ``abi.decode`` 与数组切片语法一起使用来解码ABI编码的数据：

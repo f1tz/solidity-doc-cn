@@ -1,3 +1,5 @@
+.. include:: glossaries.rst
+  
 .. _metadata:
 
 #################

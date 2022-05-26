@@ -218,7 +218,7 @@
 
 .. note::
     ``address`` 和 ``address payable`` 的区别是在 0.5.0 版本引入的，同样从这个版本开始，合约类型不再继承自地址类型，
-     不过如果合约有可支付的回退（ payable fallback ）函数或receive 函数，合约类型仍然可以显示转换为
+    不过如果合约有可支付的回退（ payable fallback ）函数或receive 函数，合约类型仍然可以显示转换为
     ``address`` 或 ``address payable`` 。
 
 .. _members-of-addresses:
@@ -568,7 +568,7 @@ Unicode 字面常量
     }
 
 .. note::
-     枚举还可以在合约或库定义之外的文件级别上声明。
+    枚举还可以在合约或库定义之外的文件级别上声明。
 
 .. index:: ! function type, ! type; function
 
@@ -579,8 +579,8 @@ Unicode 字面常量
 
 函数类型是一种表示函数的类型。可以将一个函数赋值给另一个函数类型的变量，也可以将一个函数作为参数进行传递，还能在函数调用中返回函数类型变量。
 函数类型有两类：
- - *内部（internal）* 函数类型
- - *外部（external）* 函数类型
+- *内部（internal）* 函数类型
+- *外部（external）* 函数类型
 
 内部函数只能在当前合约内被调用（更具体来说，在当前代码块内，包括内部库函数和继承的函数中），因为它们不能在当前合约上下文的外部被执行。
 调用一个内部函数是通过跳转到它的入口标签来实现的，就像在当前合约的内部调用一个函数。
@@ -602,9 +602,9 @@ Unicode 字面常量
 函数类型 ``A`` 可以隐式转换为函数类型 ``B`` 当且仅当:
 它们的参数类型相同，返回类型相同，它们的内部/外部属性是相同的，并且 ``A`` 的状态可变性并不比 ``B`` 的状态可变性更具限制性，比如：
 
- - ``pure`` 函数可以转换为 ``view`` 和 ``non-payable`` 函数
- - ``view`` 函数可以转换为 ``non-payable`` 函数
- - ``payable`` 函数可以转换为 ``non-payable`` 函数
+- ``pure`` 函数可以转换为 ``view`` 和 ``non-payable`` 函数
+- ``view`` 函数可以转换为 ``non-payable`` 函数
+- ``payable`` 函数可以转换为 ``non-payable`` 函数
 
 其他的转换则不可以。
 
@@ -614,7 +614,7 @@ Unicode 字面常量
 所以 ``non-payable`` 函数不能转换为 ``payable`` 函数。
 
 
-如果当函数类型的变量还没有初始化时就调用它的话会引发一个 :ref:`Panic 异常<assert-and-require>`。
+如果当函数类型的变量还没有初始化时就调用它的话会引发一个 :ref:`Panic 异常<assert-and-require>` 。
 如果在一个函数被 ``delete`` 之后调用它也会发生相同的情况。
 
 如果外部函数类型在 Solidity 的上下文环境以外的地方使用，它们会被视为 ``function`` 类型。
@@ -631,7 +631,7 @@ public（或 external）函数都有下面的成员：
 * ``.selector`` 返回 :ref:`ABI 函数选择器 <abi_function_selector>`
 
 .. note::
-  public（或 external）函数过去有额外两个成员：``.gas(uint)`` 和  ``.value(uint)``  在0.6.2中弃用了，在 0.8.0 中移除了。
+  public（或 external）函数过去有额外两个成员： ``.gas(uint)`` 和  ``.value(uint)``  在0.6.2中弃用了，在 0.8.0 中移除了。
   用 ``{gas: ...}`` 和  ``{value: ...}`` 代替， 参考 :ref:`外部函数调用 <external-function-calls>` 了解更多。
 
   

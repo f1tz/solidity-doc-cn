@@ -216,7 +216,7 @@ ABI 编码及解码函数
     在 :ref:`address` 上的代码(可以为空)
 
 ``<address>.codehash`` (``bytes32``)
-    :ref:`address`的codehash
+    :ref:`address` 的codehash
 
 ``<address payable>.transfer(uint256 amount)``
     向 :ref:`address` 发送数量为 amount 的 Wei，失败时抛出异常，使用固定（不可调节）的 2300 gas 的矿工费。

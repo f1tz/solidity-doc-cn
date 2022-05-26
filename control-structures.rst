@@ -9,9 +9,9 @@
 ===================
 
 JavaScript 中的大部分控制结构在 Solidity 中都是可用的，除了 ``switch`` 和 ``goto``。
-因此 Solidity 中有 ``if``，``else``，``while``，``do``，``for``，``break``，``continue``，``return``，``? :`` 这些与在 C 或者 JavaScript 中表达相同语义的关键词。
+因此 Solidity 中有 ``if`` ， ``else`` ， ``while`` ， ``do`` ， ``for`` ， ``break`` ， ``continue`` ， ``return`` ， ``? :`` 这些与在 C 或者 JavaScript 中表达相同语义的关键词。
 
-Solidity还支持 ``try``/``catch`` 语句形式的异常处理，
+Solidity还支持 ``try/catch`` 语句形式的异常处理，
 但仅用于 :ref:`外部函数调用 <external-function-calls>`　和　合约创建调用．
 
 

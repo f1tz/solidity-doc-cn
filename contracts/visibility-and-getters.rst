@@ -15,7 +15,7 @@
 状态变量有 3 种可见性：
 
 ``public``
-    对于 public 状态变量会自动生成一个  :ref:`getter hanshu <getter-functions>`  函数（见下面）。
+    对于 public 状态变量会自动生成一个  :ref:`getter 函数 <getter-functions>` （见下面）。
     以便其他的合约读取他们的值。
     当在用一个合约里使用是，外部方式访问 (如: ``this.x``) 会调用getter 函数，而内部方式访问 (如: ``x``) 会直接从存储中获取值。
     Setter函数则不会被生成，所以其他合约不能直接修改其值。
